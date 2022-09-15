@@ -2,6 +2,8 @@
 const stopwatch = document.getElementById('stopwatch');
 /*boton de pausa/play*/
 const playPauseButton = document.getElementById('play-pause');
+/*boton de stop*/
+const stopButton = document.getElementById('stop');
 /*es la pelotita*/
 const secondsSphere = document.getElementById('seconds-sphere');
 
@@ -55,3 +57,11 @@ const calculateTime = runningTime => {
 
   return `${display_minutes}:${display_seconds}`
 }
+
+playPauseButton.addEventListener('click', () => {
+  playPause()
+})
+
+stopButton.addEventListener('click', () => {
+  stop()
+})
