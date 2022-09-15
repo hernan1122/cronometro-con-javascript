@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cronometro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;400&family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&family=Oswald:wght@600&family=Roboto+Mono:wght@200;300;500;700&family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+  <main>
+    <div class="circle">
+      <div>
+        <div id="stopwatch" class="stopwatch">00:00</div>
+        <div class="buttons">
+          <button class="stop" onclick="stop()"></button>
+          <button id="play-pause" class="paused" onclick="playPause()"></button>
+        </div>
+      </div>
+    </div>
+    <div id="seconds-sphere" class="seconds-sphere"></div>
+  </main>
+</body>
+</html>
