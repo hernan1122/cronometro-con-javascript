@@ -1,11 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-image: url("../img/istockphoto-471627217-170667a.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
 main {
   font-family: 'Roboto Mono', monospace;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.title {
+  font-size: 2rem;
 }
 .circle {
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 190px;
+  height: 190px;
   border: 1px solid #fff;
   color: #fff;
   font-weight: 100;
@@ -17,56 +38,65 @@ main {
 }
 .circle::before {
   content: '';
-  border-radius: 100px;
+  border-radius: 100%;
   z-index: -1;
   position: absolute;
-  width: 160px;
-  height: 160px;
-  left: calc(50% - 80px);
-  top: calc(50% - 80px);
+  width: 270px;
+  height: 270px;
   background-color: #1d1d1d;
 }
+.stopwatch {
+  font-size: 2.4rem;
+}
 .seconds-sphere {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 50px;
   background-color: #fff;
   position: absolute;
-  left: calc(50% - 10px);
-  top: calc(50% - 10px);
+  /* left: calc(50% - 10px);
+  top: calc(50% - 10px); */
   animation: rotacion 60s linear infinite;
   animation-play-state: paused;
 }
 @keyframes rotacion {
-  from {transform: rotate(-90deg) translateX(60px);}
-  to {transform: rotate(270deg) translateX(60px);}
+  from {transform: rotate(-90deg) translateX(93px);}
+  to {transform: rotate(270deg) translateX(93px);}
 }
 .buttons {
   margin-top: 10px;
-  display: inline-flex;
+  /* display: inline-flex; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .paused {
   background-color: #1d1d1d00;
-  height: 10px;
-  border-width: 5px 0 5px 10px;
+  border: none;
+  margin-left: 15px;
+ /*  height: 10px;
+  border-width: 10px 0 10px 20px;
   cursor: pointer;
   box-sizing: border-box;
   margin-left: 15px;
-  border-color: transparent transparent transparent #fff;
+  border-color: transparent transparent transparent #fff; */
   transition: 100ms all ease;
   will-change: border-width;
-  border-style: solid;
+  /* border-style: solid; */
 }
-.running {
+.paused .fa-circle-dot {
+  font-size: 25px;
+  color: #fff;
+}
+/* .running {
   border-style: double;
   border-width: 0 0 0 10px;
-}
+} */
 .stop {
   background: #1d1d1d00;
-  background-color: #fff;
-  height: 10px;
-  width: 10px;
-  margin-left: 5px;
-  cursor: pointer;
   border: none;
+}
+.stop .fa-circle-stop {
+  font-size: 25px;
+  color: #fff;
 }
