@@ -20,8 +20,13 @@ main {
   align-items: center;
   height: 100%;
 }
-.title {
-  font-size: 2rem;
+.container-title .title {
+  font-size: 2.4rem;
+  color: #fff;
+  font-weight: 200;
+  position: absolute;
+  top: calc(50% - 215px);
+  left: calc(50% - 72px);
 }
 .circle {
   border-radius: 50%;
@@ -54,8 +59,6 @@ main {
   border-radius: 50px;
   background-color: #fff;
   position: absolute;
-  /* left: calc(50% - 10px);
-  top: calc(50% - 10px); */
   animation: rotacion 60s linear infinite;
   animation-play-state: paused;
 }
@@ -65,7 +68,6 @@ main {
 }
 .buttons {
   margin-top: 10px;
-  /* display: inline-flex; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,15 +76,8 @@ main {
   background-color: #1d1d1d00;
   border: none;
   margin-left: 15px;
- /*  height: 10px;
-  border-width: 10px 0 10px 20px;
-  cursor: pointer;
-  box-sizing: border-box;
-  margin-left: 15px;
-  border-color: transparent transparent transparent #fff; */
   transition: 100ms all ease;
   will-change: border-width;
-  /* border-style: solid; */
 }
 .paused .fa-circle-dot {
   font-size: 25px;
@@ -99,4 +94,12 @@ main {
 .stop .fa-circle-stop {
   font-size: 25px;
   color: #fff;
+}
+.container-p p {
+  position: absolute;
+  font-size: 1.1rem;
+  font-weight: 200;
+  color: #fff;
+  bottom: 12px;
+  right: 12px;
 }
