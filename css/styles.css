@@ -25,8 +25,8 @@ main {
   color: #fff;
   font-weight: 200;
   position: absolute;
-  top: calc(50% - 215px);
-  left: calc(50% - 72px);
+  top: calc(50% - 190px);
+  left: calc(50% - 78px);
 }
 .circle {
   border-radius: 50%;
@@ -48,7 +48,7 @@ main {
   position: absolute;
   width: 270px;
   height: 270px;
-  background-color: #1d1d1d;
+  background-color: #1d1d1def;
 }
 .stopwatch {
   font-size: 2.4rem;
@@ -94,12 +94,4 @@ main {
 .stop .fa-circle-stop {
   font-size: 25px;
   color: #fff;
-}
-.container-p p {
-  position: absolute;
-  font-size: 1.1rem;
-  font-weight: 200;
-  color: #fff;
-  bottom: 12px;
-  right: 12px;
 }
