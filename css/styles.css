@@ -7,9 +7,10 @@ html {
   font-size: 62.5%;
 }
 body {
-  background-image: url("../img/istockphoto-471627217-170667a.jpg");
-  background-repeat: no-repeat;
+  background-image: url("../img/lucas-kapla-wQLAGv4_OYs-unsplash.jpg");
+  background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   height: 100vh;
 }
 main {
@@ -23,7 +24,7 @@ main {
 .container-title .title {
   font-size: 2.4rem;
   color: #fff;
-  font-weight: 200;
+  font-weight: 300;
   position: absolute;
   top: calc(50% - 190px);
   left: calc(50% - 78px);
@@ -76,17 +77,12 @@ main {
   background-color: #1d1d1d00;
   border: none;
   margin-left: 15px;
-  transition: 100ms all ease;
   will-change: border-width;
 }
 .paused .fa-circle-dot {
   font-size: 25px;
   color: #fff;
 }
-/* .running {
-  border-style: double;
-  border-width: 0 0 0 10px;
-} */
 .stop {
   background: #1d1d1d00;
   border: none;
