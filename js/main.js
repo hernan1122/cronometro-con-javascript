@@ -1,15 +1,15 @@
-/*stopwatch es 00:00*/
+// stopwatch es 00:00:00
 const stopwatch = document.getElementById('stopwatch');
-/*boton de pausa/play*/
+// boton de pausa/play
 const playPauseButton = document.getElementById('play-pause');
-/*boton de stop*/
+// boton de stop
 const stopButton = document.getElementById('stop');
-/*es la pelotita*/
+// es la pelotita
 const secondsSphere = document.getElementById('seconds-sphere');
 
-/*modifica el 00:00*/
+// modifica el 00:00:00
 let stopwatchInterval;
-/*lleva el tiempo que paso*/
+// lleva el tiempo que paso
 let runningTime = 0;
 
 const playPause = () => {
@@ -35,7 +35,7 @@ const stop = () => {
   secondsSphere.style.animation = 'none';
   runningTime = 0;
   clearInterval(stopwatchInterval);
-  stopwatch.textContent = '00:00';
+  stopwatch.textContent = '00:00:00';
 }
 
 const start = () => {
@@ -53,7 +53,7 @@ const calculateTime = runningTime => {
   const total_hours = Math.floor(total_minutes / 60);
 
   const display_seconds = (total_seconds % 60).toString().padStart(2, "0");
-  const display_minutes = total_minutes.toString().padStart(2, "0");
+  const display_minutes = (total_minutes % 60).toString().padStart(2, "0");
   const display_hours = total_hours.toString().padStart(2, "0");
 
   return `${display_hours}:${display_minutes}:${display_seconds}`
